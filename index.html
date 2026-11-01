@@ -1,444 +1,161 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez mes projets scientifiques, informatiques et mon parcours d'étudiant ingénieur.">
-
-  <title>Mes projets | Portfolio</title>
-
+  <meta name="description" content="Discover my background, skills and scientific projects as a Computer Science engineering student at ENSEEIHT.">
+  <meta name="theme-color" content="#f5f8fc">
+  <title>Portfolio | Computer Science Engineering Student</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-
 <body>
-
-  <!-- NAVIGATION -->
   <header class="header">
-    <nav class="navbar container">
-
-      <a href="#accueil" class="logo">
-        Portfolio<span>.</span>
-      </a>
-
-      <button class="menu-toggle"
-              aria-label="Ouvrir le menu"
-              aria-expanded="false"
-              aria-controls="nav-links">
-        <span></span>
-        <span></span>
-        <span></span>
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">Portfolio<span>.</span></a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
       </button>
-
       <ul class="nav-links" id="nav-links">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#parcours">Parcours</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets" class="active">Projets</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#journey">My Journey</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
     </nav>
   </header>
 
-
   <main>
-
-    <!-- INTRODUCTION -->
-    <section class="projects-hero" id="accueil">
-      <div class="container">
-
+    <section class="hero" id="home">
+      <div class="container hero-layout">
         <div class="hero-content reveal">
-
-          <span class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            MON UNIVERS TECHNIQUE
-          </span>
-
-          <h1>
-            Mes projets<span class="blue-dot">.</span>
-          </h1>
-
-          <p>
-            Des projets scientifiques et informatiques qui
-            reflètent ma curiosité, mon esprit analytique et
-            mon intérêt pour la résolution de problèmes.
-          </p>
-
-          <a href="#projets" class="scroll-link">
-            Découvrir mes réalisations
-            <span>↓</span>
-          </a>
-
+          <span class="eyebrow"><span class="eyebrow-dot"></span> COMPUTER SCIENCE &amp; ENGINEERING</span>
+          <h1>Curious mind.<br>Analytical approach<span class="blue-dot">.</span></h1>
+          <p>I'm a Computer Science engineering student at ENSEEIHT, interested in programming, mathematics and using technology to solve meaningful problems.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="primary-button">Explore my work <span>↓</span></a>
+            <a href="#about" class="text-link">More about me <span>↗</span></a>
+          </div>
         </div>
-
-        <div class="hero-decoration" aria-hidden="true">
-          <span class="decoration-circle circle-one"></span>
-          <span class="decoration-circle circle-two"></span>
-          <span class="decoration-circle circle-three"></span>
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-monogram">CS<span>.</span></div>
+          <div class="floating-note note-top">Problem solving</div>
+          <div class="floating-note note-bottom">Code · Logic · Models</div>
+          <span class="hero-spark spark-one">✳</span><span class="hero-spark spark-two">+</span>
         </div>
-
       </div>
     </section>
 
+    <section class="section about-section" id="about">
+      <div class="container two-column">
+        <div class="section-intro reveal">
+          <span class="section-label">A LITTLE ABOUT ME</span>
+          <h2>Learning by<br>understanding<span>.</span></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">I enjoy exploring how things work, breaking down complex questions and turning ideas into clear, practical solutions.</p>
+          <p>My academic background combines a strong foundation in mathematics with an ongoing engineering education in computer science at ENSEEIHT. I am particularly interested in programming, scientific problem-solving and the connection between mathematical models and real-world applications.</p>
+          <div class="about-highlight"><span class="highlight-mark">“</span><span>My goal is to keep learning, build solid technical skills and take on challenging projects.</span></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- SECTION PROJETS -->
-    <section class="projects-section" id="projets">
-
+    <section class="section journey-section" id="journey">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div>
-            <span class="section-label">MES RÉALISATIONS</span>
-            <h2>Explorer, comprendre,<br>construire<span>.</span></h2>
-          </div>
-
-          <p>
-            Chaque projet est une occasion de mettre en pratique
-            mes connaissances et de développer de nouvelles
-            compétences.
-          </p>
-
+          <div><span class="section-label">EDUCATION</span><h2>My academic journey<span>.</span></h2></div>
+          <p>A path shaped by mathematics, scientific reasoning and a growing focus on computer science.</p>
         </div>
-
-
-        <!-- PROJET PRINCIPAL -->
-        <article class="featured-project reveal">
-
-          <div class="featured-visual">
-
-            <div class="visual-top">
-              <span class="visual-badge">PROJET PRINCIPAL</span>
-              <span class="visual-index">01 / 03</span>
-            </div>
-
-            <!-- Illustration vectorielle intégrée -->
-            <svg class="checkout-illustration"
-                 viewBox="0 0 600 420"
-                 xmlns="http://www.w3.org/2000/svg"
-                 role="img"
-                 aria-label="Illustration conceptuelle de caisses et de files d'attente">
-
-              <defs>
-                <linearGradient id="blueGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#60A5FA"/>
-                  <stop offset="100%" stop-color="#2563EB"/>
-                </linearGradient>
-              </defs>
-
-              <!-- Cercles décoratifs -->
-              <circle cx="300" cy="205" r="170"
-                      fill="#DBEAFE" opacity=".65"/>
-              <circle cx="300" cy="205" r="130"
-                      fill="#EFF6FF"/>
-
-              <!-- Files d'attente -->
-              <path d="M95 110 H505" stroke="#93C5FD"
-                    stroke-width="4" stroke-dasharray="8 10"
-                    stroke-linecap="round"/>
-
-              <path d="M95 160 H505" stroke="#93C5FD"
-                    stroke-width="4" stroke-dasharray="8 10"
-                    stroke-linecap="round"/>
-
-              <!-- Caisses -->
-              <g>
-                <rect x="110" y="210" width="115" height="85"
-                      rx="14" fill="white"
-                      stroke="#BFDBFE" stroke-width="3"/>
-
-                <rect x="242" y="210" width="115" height="85"
-                      rx="14" fill="white"
-                      stroke="#BFDBFE" stroke-width="3"/>
-
-                <rect x="374" y="210" width="115" height="85"
-                      rx="14" fill="white"
-                      stroke="#BFDBFE" stroke-width="3"/>
-
-                <rect x="126" y="225" width="83" height="35"
-                      rx="6" fill="#DBEAFE"/>
-
-                <rect x="258" y="225" width="83" height="35"
-                      rx="6" fill="#DBEAFE"/>
-
-                <rect x="390" y="225" width="83" height="35"
-                      rx="6" fill="#DBEAFE"/>
-
-                <path d="M145 275 H190 M277 275 H322 M409 275 H454"
-                      stroke="#2563EB" stroke-width="5"
-                      stroke-linecap="round"/>
-              </g>
-
-              <!-- Clients stylisés -->
-              <g fill="#2563EB">
-                <circle cx="145" cy="115" r="12"/>
-                <circle cx="250" cy="115" r="12"/>
-                <circle cx="355" cy="115" r="12"/>
-                <circle cx="460" cy="115" r="12"/>
-              </g>
-
-              <g stroke="#60A5FA" stroke-width="7"
-                 stroke-linecap="round">
-                <path d="M145 132 V148"/>
-                <path d="M250 132 V148"/>
-                <path d="M355 132 V148"/>
-                <path d="M460 132 V148"/>
-              </g>
-
-              <!-- Flèches -->
-              <g fill="none" stroke="#2563EB"
-                 stroke-width="4" stroke-linecap="round"
-                 stroke-linejoin="round">
-                <path d="M145 175 V193 L137 185 M145 193 L153 185"/>
-                <path d="M300 175 V193 L292 185 M300 193 L308 185"/>
-                <path d="M455 175 V193 L447 185 M455 193 L463 185"/>
-              </g>
-
-              <!-- Texte décoratif -->
-              <rect x="195" y="330" width="210" height="40"
-                    rx="20" fill="#2563EB"/>
-              <text x="300" y="356" text-anchor="middle"
-                    fill="white" font-size="15"
-                    font-family="Arial" font-weight="bold">
-                OPTIMISATION
-              </text>
-
-            </svg>
-
-            <div class="visual-caption">
-              <span>Modélisation mathématique</span>
-              <span>Simulation numérique</span>
-            </div>
-
-          </div>
-
-
-          <div class="featured-content">
-
-            <div class="project-meta">
-              <span class="project-category">TIPE · CPGE MP</span>
-              <span class="project-year">Projet scientifique</span>
-            </div>
-
-            <h3>Optimisation des caisses</h3>
-
-            <p class="featured-description">
-              Comment déterminer le nombre optimal de caisses
-              à ouvrir dans un supermarché ?
-
-              Ce projet étudie un système de files d'attente
-              à travers une modélisation probabiliste et
-              une simulation numérique en Python.
-            </p>
-
-            <div class="project-details">
-
-              <div class="detail-item">
-                <span class="detail-number">01</span>
-                <div>
-                  <h4>Modélisation</h4>
-                  <p>
-                    Étude probabiliste des arrivées des clients
-                    et des temps de service.
-                  </p>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <span class="detail-number">02</span>
-                <div>
-                  <h4>Simulation</h4>
-                  <p>
-                    Développement d'une simulation numérique
-                    avec Python.
-                  </p>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <span class="detail-number">03</span>
-                <div>
-                  <h4>Optimisation</h4>
-                  <p>
-                    Comparaison des configurations pour
-                    rechercher le nombre optimal de caisses.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="technology-list">
-              <span>Python</span>
-              <span>Probabilités</span>
-              <span>Statistiques</span>
-              <span>Simulation</span>
-              <span>Optimisation</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- PROJETS SECONDAIRES -->
-        <div class="other-projects-heading reveal">
-          <div>
-            <span class="section-label">AUTRES RÉALISATIONS</span>
-            <h2>Autres projets<span>.</span></h2>
-          </div>
-
-          <span class="project-count">02 projets</span>
-        </div>
-
-
-        <div class="project-grid">
-
-          <!-- PROJET 2 -->
-          <article class="project-card reveal">
-
-            <div class="card-visual science-visual">
-              <span class="card-number">02</span>
-
-              <div class="science-symbols" aria-hidden="true">
-                <span>∑</span>
-                <span>π</span>
-                <span>∫</span>
-                <span>∞</span>
-              </div>
-
-              <div class="science-center">
-                <span>SCIENCES</span>
-                <strong>&</strong>
-                <span>INGÉNIERIE</span>
-              </div>
-            </div>
-
-            <div class="card-content">
-
-              <span class="project-category">
-                FORMATION · CPGE MPSI/MP
-              </span>
-
-              <h3>Travaux en CPGE</h3>
-
-              <p>
-                Travaux et études réalisés durant les classes
-                préparatoires, mobilisant les outils
-                mathématiques, physiques et informatiques.
-              </p>
-
-              <div class="technology-list">
-                <span>Mathématiques</span>
-                <span>Physique</span>
-                <span>Informatique</span>
-              </div>
-
-            </div>
-
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-marker"></span>
+            <div class="timeline-date">HIGH SCHOOL</div>
+            <div class="timeline-card"><span class="timeline-kicker">Scientific background</span><h3>Scientific Baccalaureate — Mathematics</h3><p>A mathematics-focused scientific education that developed my interest in analytical reasoning and scientific subjects.</p></div>
           </article>
-
-
-          <!-- PROJET 3 -->
-          <article class="project-card reveal">
-
-            <div class="card-visual web-visual">
-              <span class="card-number">03</span>
-
-              <div class="browser-window">
-                <div class="browser-bar">
-                  <i></i><i></i><i></i>
-                </div>
-
-                <div class="browser-content">
-                  <div class="browser-sidebar"></div>
-                  <div class="browser-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="code-symbol">&lt;/&gt;</div>
-            </div>
-
-            <div class="card-content">
-
-              <span class="project-category">
-                DÉVELOPPEMENT WEB
-              </span>
-
-              <h3>Mon ePortfolio</h3>
-
-              <p>
-                Conception et développement d'un site web
-                personnel pour présenter mon parcours,
-                mes compétences et mes réalisations.
-              </p>
-
-              <div class="technology-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-            </div>
-
+          <article class="timeline-item reveal">
+            <span class="timeline-marker"></span>
+            <div class="timeline-date">PREPARATORY STUDIES</div>
+            <div class="timeline-card"><span class="timeline-kicker">Scientific foundations</span><h3>Intensive studies in mathematics and physics</h3><p>Further development of mathematical, scientific and problem-solving foundations through demanding academic studies.</p></div>
           </article>
-
+          <article class="timeline-item reveal">
+            <span class="timeline-marker"></span>
+            <div class="timeline-date">CURRENTLY</div>
+            <div class="timeline-card"><span class="timeline-kicker">Engineering education</span><h3>ENSEEIHT — Computer Science</h3><p>Engineering studies in Computer Science, with a focus on developing technical knowledge and applying it to computational problems.</p></div>
+          </article>
         </div>
-
       </div>
     </section>
 
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="section-label">WHAT I WORK WITH</span><h2>Skills &amp; knowledge<span>.</span></h2></div>
+          <p>A selection of programming languages, scientific foundations and approaches developed through my studies and projects.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-icon">&lt;/&gt;</div><h3>Programming</h3><p>Languages used to develop programs and explore computational solutions.</p><div class="skill-tags"><span>Python</span><span>C</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">▤</div><h3>Databases</h3><p>Working with structured data and relational database queries.</p><div class="skill-tags"><span>SQL</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">∑</div><h3>Mathematics &amp; Science</h3><p>Scientific foundations supporting rigorous analysis and modelling.</p><div class="skill-tags"><span>Mathematics</span><span>Probability</span><span>Statistics</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">⌁</div><h3>Scientific Methods</h3><p>Approaches used to study systems, test hypotheses and compare solutions.</p><div class="skill-tags"><span>Modelling</span><span>Numerical simulation</span><span>Optimization</span></div></article>
+        </div>
+        <p class="skills-note reveal">I am continuously expanding my technical toolkit as I progress through my engineering studies.</p>
+      </div>
+    </section>
 
-    <!-- CONTACT -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="section-label">SELECTED WORK</span><h2>Explore, understand,<br>build<span>.</span></h2></div>
+          <p>A scientific project focused on modelling a real-world system and studying how it can be improved.</p>
+        </div>
+        <article class="featured-project reveal">
+          <div class="featured-visual">
+            <div class="visual-top"><span class="visual-badge">SCIENTIFIC PROJECT</span><span class="visual-index">01 / 01</span></div>
+            <svg class="checkout-illustration" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual illustration of supermarket checkout lanes and customer queues">
+              <defs><linearGradient id="blueGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+              <circle cx="300" cy="205" r="170" fill="#DBEAFE" opacity=".65"/><circle cx="300" cy="205" r="130" fill="#EFF6FF"/>
+              <path d="M95 110 H505 M95 160 H505" stroke="#93C5FD" stroke-width="4" stroke-dasharray="8 10" stroke-linecap="round"/>
+              <g><rect x="110" y="210" width="115" height="85" rx="14" fill="white" stroke="#BFDBFE" stroke-width="3"/><rect x="242" y="210" width="115" height="85" rx="14" fill="white" stroke="#BFDBFE" stroke-width="3"/><rect x="374" y="210" width="115" height="85" rx="14" fill="white" stroke="#BFDBFE" stroke-width="3"/><rect x="126" y="225" width="83" height="35" rx="6" fill="#DBEAFE"/><rect x="258" y="225" width="83" height="35" rx="6" fill="#DBEAFE"/><rect x="390" y="225" width="83" height="35" rx="6" fill="#DBEAFE"/><path d="M145 275 H190 M277 275 H322 M409 275 H454" stroke="#2563EB" stroke-width="5" stroke-linecap="round"/></g>
+              <g fill="#2563EB"><circle cx="145" cy="115" r="12"/><circle cx="250" cy="115" r="12"/><circle cx="355" cy="115" r="12"/><circle cx="460" cy="115" r="12"/></g>
+              <g stroke="#60A5FA" stroke-width="7" stroke-linecap="round"><path d="M145 132 V148"/><path d="M250 132 V148"/><path d="M355 132 V148"/><path d="M460 132 V148"/></g>
+              <g fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M145 175 V193 L137 185 M145 193 L153 185"/><path d="M300 175 V193 L292 185 M300 193 L308 185"/><path d="M455 175 V193 L447 185 M455 193 L463 185"/></g>
+              <rect x="195" y="330" width="210" height="40" rx="20" fill="url(#blueGradient)"/><text x="300" y="356" text-anchor="middle" fill="white" font-size="15" font-family="Arial" font-weight="bold">OPTIMIZATION</text>
+            </svg>
+            <div class="visual-caption"><span>Mathematical modelling</span><span>Numerical simulation</span></div>
+          </div>
+          <div class="featured-content">
+            <div class="project-meta"><span class="project-category">SCIENTIFIC RESEARCH PROJECT</span><span class="project-year">TIPE</span></div>
+            <h3>Supermarket Checkout Optimization</h3>
+            <p class="featured-description">How many checkout counters should a supermarket open to balance customer waiting time and operating resources? This project studies a queuing system through probabilistic modelling and numerical simulation using Python.</p>
+            <div class="project-details">
+              <div class="detail-item"><span class="detail-number">01</span><div><h4>Modelling</h4><p>Study of customer arrivals and service times using probabilistic concepts.</p></div></div>
+              <div class="detail-item"><span class="detail-number">02</span><div><h4>Simulation</h4><p>Implementation of a numerical simulation in Python to explore the system's behaviour.</p></div></div>
+              <div class="detail-item"><span class="detail-number">03</span><div><h4>Optimization</h4><p>Comparison of different checkout configurations to investigate an effective number of open counters.</p></div></div>
+            </div>
+            <div class="technology-list"><span>Python</span><span>Probability</span><span>Statistics</span><span>Simulation</span><span>Optimization</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
       <div class="container contact-content reveal">
-
-        <span class="section-label">ET MAINTENANT ?</span>
-
-        <h2>Construisons la suite<span>.</span></h2>
-
-        <p>
-          Découvrez mon parcours et n'hésitez pas à me contacter
-          pour échanger autour de projets et d'opportunités.
-        </p>
-
-        <a href="mailto:VOTRE_EMAIL@example.com"
-           class="contact-button">
-          Me contacter <span>↗</span>
-        </a>
-
+        <span class="section-label">LET'S CONNECT</span>
+        <h2>Have a question or an idea<span>?</span></h2>
+        <p>Feel free to get in touch to discuss technology, scientific projects or future opportunities.</p>
+        <!-- Replace the placeholder below with your email address. -->
+        <a href="mailto:othmanegre123@gmail .com" class="contact-button">Get in touch <span>↗</span></a>
       </div>
     </section>
-
   </main>
 
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <a href="#accueil" class="logo">Portfolio<span>.</span></a>
-
-      <p>
-        © <span id="current-year"></span> · Mon portfolio personnel
-      </p>
-
-      <a href="#accueil" class="back-to-top">
-        Retour en haut ↑
-      </a>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container footer-content"><a href="#home" class="logo">Portfolio<span>.</span></a><p>© <span id="current-year"></span> · Personal portfolio</p><a href="#home" class="back-to-top">Back to top ↑</a></div></footer>
 </body>
 </html>
+
