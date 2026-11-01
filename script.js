@@ -1,159 +1,110 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links a');
 
-  // =====================================
-  // 1. MENU MOBILE
-  // =====================================
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
+  // Mobile navigation menu
   if (menuToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    };
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
 
-      const isOpen = navLinks.classList.toggle("open");
-
-      menuToggle.classList.toggle("open", isOpen);
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
       menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Fermer le menu" : "Ouvrir le menu"
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
       );
-
     });
 
-    // Fermer le menu après sélection
-    navLinks.querySelectorAll("a").forEach(link => {
-
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.classList.remove("open");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
-      });
-
+    navItems.forEach((link) => {
+      link.addEventListener('click', closeMenu);
     });
 
-    // Fermer avec la touche Escape
-    document.addEventListener("keydown", event => {
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
 
-      if (event.key === "Escape") {
-        navLinks.classList.remove("open");
-        menuToggle.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
+    document.addEventListener('click', (event) => {
+      if (
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        closeMenu();
       }
-
     });
-
   }
 
+  // Automatic footer year
+  const year = document.getElementById('current-year');
 
-  // =====================================
-  // 2. ANIMATIONS AU DÉFILEMENT
-  // =====================================
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-  const revealElements = document.querySelectorAll(".reveal");
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+  // Reveal animations
+  const revealElements = document.querySelectorAll('.reveal');
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
   ).matches;
 
-  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-
-    revealElements.forEach(element => {
-      element.classList.add("visible");
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealElements.forEach((element) => {
+      element.classList.add('visible');
     });
-
   } else {
-
-    const observer = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
       (entries, observer) => {
-
-        entries.forEach(entry => {
-
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
-
           }
-
         });
-
       },
       {
         threshold: 0.12,
-        rootMargin: "0px 0px -30px 0px"
+        rootMargin: '0px 0px -30px 0px'
       }
     );
 
-    revealElements.forEach(element => {
-      observer.observe(element);
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
     });
-
   }
 
+  // Active navigation link while scrolling
+  const sections = document.querySelectorAll('main section[id]');
 
-  // =====================================
-  // 3. ANNÉE AUTOMATIQUE DANS LE FOOTER
-  // =====================================
-
-  const yearElement = document.getElementById("current-year");
-
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
-
-
-  // =====================================
-  // 4. LIEN ACTIF DE NAVIGATION
-  // =====================================
-
-  const pageSections = document.querySelectorAll(
-    "#accueil, #projets, #contact"
-  );
-
-  const pageLinks = document.querySelectorAll(
-    ".nav-links a"
-  );
-
-  if ("IntersectionObserver" in window) {
-
+  if ('IntersectionObserver' in window) {
     const sectionObserver = new IntersectionObserver(
-      entries => {
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
 
-        entries.forEach(entry => {
+          const activeId = entry.target.id;
 
-          if (entry.isIntersecting) {
+          navItems.forEach((link) => {
+            const isActive =
+              link.getAttribute('href') === `#${activeId}`;
 
-            const currentId = entry.target.id;
-
-            pageLinks.forEach(link => {
-
-              link.classList.remove("active");
-
-              if (link.getAttribute("href") === `#${currentId}`) {
-                link.classList.add("active");
-              }
-
-            });
-
-          }
-
+            link.classList.toggle('active', isActive);
+          });
         });
-
       },
       {
-        threshold: 0.4
+        rootMargin: '-30% 0px -60% 0px',
+        threshold: 0
       }
     );
 
-    pageSections.forEach(section => {
+    sections.forEach((section) => {
       sectionObserver.observe(section);
     });
-
   }
-
 });
