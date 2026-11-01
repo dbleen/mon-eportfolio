@@ -894,3 +894,21 @@ h1, h2, h3, h4 {
 .cv-download-btn:hover {
   opacity: 0.7;
 }
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700; /* Texte bien gras */
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.cv-download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Petit effet au survol */
+  transform: translateY(-2px); /* Légère élévation */
+}
