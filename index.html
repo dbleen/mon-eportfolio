@@ -2,388 +2,443 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio académique et professionnel d'un étudiant ingénieur à l'ENSEEIHT, en Sciences du Numérique.">
-    <title>Mon Portfolio | Étudiant ingénieur ENSEEIHT</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez mes projets scientifiques, informatiques et mon parcours d'étudiant ingénieur.">
+
+  <title>Mes projets | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header class="header">
+  <!-- NAVIGATION -->
+  <header class="header">
     <nav class="navbar container">
-        <a href="#accueil" class="logo">Mon<span>Portfolio.</span></a>
 
-        <button class="menu-toggle" id="menu-toggle"
-                aria-label="Ouvrir le menu" aria-expanded="false">
-            ☰
-        </button>
+      <a href="#accueil" class="logo">
+        Portfolio<span>.</span>
+      </a>
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#apropos">À propos</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#objectifs">Objectifs</a></li>
-        </ul>
+      <button class="menu-toggle"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets" class="active">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
     </nav>
-</header>
+  </header>
 
-<main>
 
-    <!-- ACCUEIL -->
-    <section id="accueil" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="eyebrow">PORTFOLIO ACADÉMIQUE · 2026-2027</p>
+  <main>
 
-                <h1>
-                    Bonjour,<br>
-                    je suis étudiant ingénieur
-                    <span>à l'ENSEEIHT.</span>
-                </h1>
+    <!-- INTRODUCTION -->
+    <section class="projects-hero" id="accueil">
+      <div class="container">
 
-                <p class="hero-description">
-                    Étudiant en première année du département
-                    Sciences du Numérique, je construis progressivement
-                    mon parcours dans le domaine de l'ingénierie
-                    informatique et du numérique.
-                </p>
+        <div class="hero-content reveal">
 
-                <div class="hero-buttons">
-                    <a href="#parcours" class="btn btn-primary">
-                        Découvrir mon parcours
-                    </a>
-                    <a href="#projets" class="btn btn-outline">
-                        Voir mes projets
-                    </a>
-                </div>
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            MON UNIVERS TECHNIQUE
+          </span>
 
-                <p class="hero-note">
-                    De la CPGE scientifique à l'école d'ingénieur.
-                </p>
-            </div>
+          <h1>
+            Mes projets<span class="blue-dot">.</span>
+          </h1>
 
-            <div class="hero-visual">
-                <div class="visual-card">
-                    <div class="visual-icon">N7</div>
-                    <h3>Sciences du Numérique</h3>
-                    <p>ENSEEIHT · Toulouse</p>
-                    <div class="visual-line"></div>
-                    <div class="visual-tags">
-                        <span>Informatique</span>
-                        <span>Sciences</span>
-                        <span>Ingénierie</span>
-                    </div>
-                </div>
-                <div class="floating-shape shape-one"></div>
-                <div class="floating-shape shape-two"></div>
-            </div>
+          <p>
+            Des projets scientifiques et informatiques qui
+            reflètent ma curiosité, mon esprit analytique et
+            mon intérêt pour la résolution de problèmes.
+          </p>
+
+          <a href="#projets" class="scroll-link">
+            Découvrir mes réalisations
+            <span>↓</span>
+          </a>
+
         </div>
+
+        <div class="hero-decoration" aria-hidden="true">
+          <span class="decoration-circle circle-one"></span>
+          <span class="decoration-circle circle-two"></span>
+          <span class="decoration-circle circle-three"></span>
+        </div>
+
+      </div>
     </section>
 
-    <!-- A PROPOS -->
-    <section id="apropos" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">PRÉSENTATION</p>
-                <h2>À propos de moi</h2>
-                <p>Mon identité, mon parcours et mes motivations.</p>
-            </div>
 
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">01</div>
-                    <h3>Mon profil</h3>
-                    <p>
-                        Je suis étudiant ingénieur à l'ENSEEIHT,
-                        au sein du département Sciences du Numérique.
-                        Après deux années de classe préparatoire
-                        MPSI/MP, je poursuis aujourd'hui ma formation
-                        dans le domaine des sciences et technologies
-                        du numérique.
-                    </p>
-                </div>
+    <!-- SECTION PROJETS -->
+    <section class="projects-section" id="projets">
 
-                <div class="about-card">
-                    <div class="card-icon">02</div>
-                    <h3>Ma motivation</h3>
-                    <p>
-                        Je souhaite approfondir mes connaissances
-                        scientifiques et développer des compétences
-                        techniques me permettant de comprendre,
-                        concevoir et réaliser des solutions
-                        numériques.
-                    </p>
-                </div>
+      <div class="container">
 
-                <div class="about-card">
-                    <div class="card-icon">03</div>
-                    <h3>Ma vision</h3>
-                    <p>
-                        Je considère la formation d'ingénieur comme
-                        une occasion de progresser continuellement,
-                        de travailler sur des problèmes concrets
-                        et de développer mon autonomie.
-                    </p>
-                </div>
-            </div>
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="section-label">MES RÉALISATIONS</span>
+            <h2>Explorer, comprendre,<br>construire<span>.</span></h2>
+          </div>
+
+          <p>
+            Chaque projet est une occasion de mettre en pratique
+            mes connaissances et de développer de nouvelles
+            compétences.
+          </p>
+
         </div>
-    </section>
 
-    <!-- PARCOURS -->
-    <section id="parcours" class="section section-soft">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">FORMATION</p>
-                <h2>Mon parcours académique</h2>
-                <p>Les grandes étapes de mon parcours scientifique.</p>
+
+        <!-- PROJET PRINCIPAL -->
+        <article class="featured-project reveal">
+
+          <div class="featured-visual">
+
+            <div class="visual-top">
+              <span class="visual-badge">PROJET PRINCIPAL</span>
+              <span class="visual-index">01 / 03</span>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Avant l'école d'ingénieur</span>
-                        <h3>Classes préparatoires MPSI / MP</h3>
-                        <p>
-                            Formation scientifique intensive axée sur
-                            les mathématiques, la physique et
-                            l'informatique. Développement de la rigueur,
-                            de la capacité d'analyse et de la résolution
-                            de problèmes complexes.
-                        </p>
-                    </div>
-                </div>
+            <!-- Illustration vectorielle intégrée -->
+            <svg class="checkout-illustration"
+                 viewBox="0 0 600 420"
+                 xmlns="http://www.w3.org/2000/svg"
+                 role="img"
+                 aria-label="Illustration conceptuelle de caisses et de files d'attente">
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2026 – Aujourd'hui</span>
-                        <h3>ENSEEIHT – Sciences du Numérique</h3>
-                        <p>
-                            Formation d'ingénieur orientée vers les
-                            sciences du numérique, l'informatique
-                            et les technologies associées.
-                            Acquisition progressive de connaissances
-                            scientifiques et techniques.
-                        </p>
-                    </div>
-                </div>
+              <defs>
+                <linearGradient id="blueGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#60A5FA"/>
+                  <stop offset="100%" stop-color="#2563EB"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Cercles décoratifs -->
+              <circle cx="300" cy="205" r="170"
+                      fill="#DBEAFE" opacity=".65"/>
+              <circle cx="300" cy="205" r="130"
+                      fill="#EFF6FF"/>
+
+              <!-- Files d'attente -->
+              <path d="M95 110 H505" stroke="#93C5FD"
+                    stroke-width="4" stroke-dasharray="8 10"
+                    stroke-linecap="round"/>
+
+              <path d="M95 160 H505" stroke="#93C5FD"
+                    stroke-width="4" stroke-dasharray="8 10"
+                    stroke-linecap="round"/>
+
+              <!-- Caisses -->
+              <g>
+                <rect x="110" y="210" width="115" height="85"
+                      rx="14" fill="white"
+                      stroke="#BFDBFE" stroke-width="3"/>
+
+                <rect x="242" y="210" width="115" height="85"
+                      rx="14" fill="white"
+                      stroke="#BFDBFE" stroke-width="3"/>
+
+                <rect x="374" y="210" width="115" height="85"
+                      rx="14" fill="white"
+                      stroke="#BFDBFE" stroke-width="3"/>
+
+                <rect x="126" y="225" width="83" height="35"
+                      rx="6" fill="#DBEAFE"/>
+
+                <rect x="258" y="225" width="83" height="35"
+                      rx="6" fill="#DBEAFE"/>
+
+                <rect x="390" y="225" width="83" height="35"
+                      rx="6" fill="#DBEAFE"/>
+
+                <path d="M145 275 H190 M277 275 H322 M409 275 H454"
+                      stroke="#2563EB" stroke-width="5"
+                      stroke-linecap="round"/>
+              </g>
+
+              <!-- Clients stylisés -->
+              <g fill="#2563EB">
+                <circle cx="145" cy="115" r="12"/>
+                <circle cx="250" cy="115" r="12"/>
+                <circle cx="355" cy="115" r="12"/>
+                <circle cx="460" cy="115" r="12"/>
+              </g>
+
+              <g stroke="#60A5FA" stroke-width="7"
+                 stroke-linecap="round">
+                <path d="M145 132 V148"/>
+                <path d="M250 132 V148"/>
+                <path d="M355 132 V148"/>
+                <path d="M460 132 V148"/>
+              </g>
+
+              <!-- Flèches -->
+              <g fill="none" stroke="#2563EB"
+                 stroke-width="4" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M145 175 V193 L137 185 M145 193 L153 185"/>
+                <path d="M300 175 V193 L292 185 M300 193 L308 185"/>
+                <path d="M455 175 V193 L447 185 M455 193 L463 185"/>
+              </g>
+
+              <!-- Texte décoratif -->
+              <rect x="195" y="330" width="210" height="40"
+                    rx="20" fill="#2563EB"/>
+              <text x="300" y="356" text-anchor="middle"
+                    fill="white" font-size="15"
+                    font-family="Arial" font-weight="bold">
+                OPTIMISATION
+              </text>
+
+            </svg>
+
+            <div class="visual-caption">
+              <span>Modélisation mathématique</span>
+              <span>Simulation numérique</span>
             </div>
-        </div>
-    </section>
 
-    <!-- COMPETENCES -->
-    <section id="competences" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">SAVOIR-FAIRE</p>
-                <h2>Mes compétences</h2>
-                <p>
-                    Les connaissances et aptitudes que je développe
-                    au cours de ma formation.
-                </p>
+          </div>
+
+
+          <div class="featured-content">
+
+            <div class="project-meta">
+              <span class="project-category">TIPE · CPGE MP</span>
+              <span class="project-year">Projet scientifique</span>
             </div>
 
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <div class="skill-icon">∑</div>
-                    <h3>Sciences fondamentales</h3>
-                    <p>
-                        Mathématiques, raisonnement logique,
-                        analyse et résolution de problèmes.
-                    </p>
-                </article>
+            <h3>Optimisation des caisses</h3>
 
-                <article class="skill-card">
-                    <div class="skill-icon">&lt;/&gt;</div>
-                    <h3>Informatique</h3>
-                    <p>
-                        Programmation, algorithmique,
-                        structures de données et développement logiciel.
-                    </p>
-                </article>
+            <p class="featured-description">
+              Comment déterminer le nombre optimal de caisses
+              à ouvrir dans un supermarché ?
 
-                <article class="skill-card">
-                    <div class="skill-icon">◎</div>
-                    <h3>Méthodologie</h3>
-                    <p>
-                        Organisation du travail, autonomie,
-                        rigueur et apprentissage continu.
-                    </p>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">↗</div>
-                    <h3>Compétences humaines</h3>
-                    <p>
-                        Communication, travail en équipe,
-                        curiosité et esprit critique.
-                    </p>
-                </article>
-            </div>
-
-            <p class="disclaimer">
-                Les compétences présentées sont des domaines de travail.
-                Elles seront précisées et illustrées au fil de ma formation.
+              Ce projet étudie un système de files d'attente
+              à travers une modélisation probabiliste et
+              une simulation numérique en Python.
             </p>
+
+            <div class="project-details">
+
+              <div class="detail-item">
+                <span class="detail-number">01</span>
+                <div>
+                  <h4>Modélisation</h4>
+                  <p>
+                    Étude probabiliste des arrivées des clients
+                    et des temps de service.
+                  </p>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <span class="detail-number">02</span>
+                <div>
+                  <h4>Simulation</h4>
+                  <p>
+                    Développement d'une simulation numérique
+                    avec Python.
+                  </p>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <span class="detail-number">03</span>
+                <div>
+                  <h4>Optimisation</h4>
+                  <p>
+                    Comparaison des configurations pour
+                    rechercher le nombre optimal de caisses.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="technology-list">
+              <span>Python</span>
+              <span>Probabilités</span>
+              <span>Statistiques</span>
+              <span>Simulation</span>
+              <span>Optimisation</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJETS SECONDAIRES -->
+        <div class="other-projects-heading reveal">
+          <div>
+            <span class="section-label">AUTRES RÉALISATIONS</span>
+            <h2>Autres projets<span>.</span></h2>
+          </div>
+
+          <span class="project-count">02 projets</span>
         </div>
-    </section>
 
-    <!-- PROJETS -->
-    <section id="projets" class="section section-soft">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">RÉALISATIONS</p>
-                <h2>Mes projets</h2>
-                <p>
-                    Une sélection de travaux et de réalisations
-                    académiques et personnelles.
-                </p>
+
+        <div class="project-grid">
+
+          <!-- PROJET 2 -->
+          <article class="project-card reveal">
+
+            <div class="card-visual science-visual">
+              <span class="card-number">02</span>
+
+              <div class="science-symbols" aria-hidden="true">
+                <span>∑</span>
+                <span>π</span>
+                <span>∫</span>
+                <span>∞</span>
+              </div>
+
+              <div class="science-center">
+                <span>SCIENCES</span>
+                <strong>&</strong>
+                <span>INGÉNIERIE</span>
+              </div>
             </div>
 
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-number">PROJET 01</div>
-                    <div class="project-content">
-                        <h3>Travaux en CPGE</h3>
-                        <p>
-                            Travaux scientifiques et activités réalisés
-                            durant les classes préparatoires MPSI/MP.
-                        </p>
-                        <span class="project-tag">Formation scientifique</span>
-                    </div>
-                </article>
+            <div class="card-content">
 
-                <article class="project-card">
-                    <div class="project-number">PROJET 02</div>
-                    <div class="project-content">
-                        <h3>Projets en informatique</h3>
-                        <p>
-                            Espace dédié aux futurs projets de
-                            programmation, d'algorithmique et de
-                            développement logiciel.
-                        </p>
-                        <span class="project-tag">Informatique</span>
-                    </div>
-                </article>
+              <span class="project-category">
+                FORMATION · CPGE MPSI/MP
+              </span>
 
-                <article class="project-card">
-                    <div class="project-number">PROJET 03</div>
-                    <div class="project-content">
-                        <h3>Mon ePortfolio</h3>
-                        <p>
-                            Création de ce site web afin de présenter
-                            mon parcours, mes compétences et mon
-                            évolution en école d'ingénieur.
-                        </p>
-                        <span class="project-tag">HTML · CSS · JavaScript</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+              <h3>Travaux en CPGE</h3>
 
-    <!-- OBJECTIFS -->
-    <section id="objectifs" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">PERSPECTIVES</p>
-                <h2>Mes objectifs</h2>
-                <p>Les directions dans lesquelles je souhaite progresser.</p>
+              <p>
+                Travaux et études réalisés durant les classes
+                préparatoires, mobilisant les outils
+                mathématiques, physiques et informatiques.
+              </p>
+
+              <div class="technology-list">
+                <span>Mathématiques</span>
+                <span>Physique</span>
+                <span>Informatique</span>
+              </div>
+
             </div>
 
-            <div class="objectives-grid">
-                <div class="objective">
-                    <span>01</span>
-                    <div>
-                        <h3>À court terme</h3>
-                        <p>
-                            Consolider mes connaissances scientifiques,
-                            développer mes compétences en programmation
-                            et réussir mon intégration en école d'ingénieur.
-                        </p>
-                    </div>
+          </article>
+
+
+          <!-- PROJET 3 -->
+          <article class="project-card reveal">
+
+            <div class="card-visual web-visual">
+              <span class="card-number">03</span>
+
+              <div class="browser-window">
+                <div class="browser-bar">
+                  <i></i><i></i><i></i>
                 </div>
 
-                <div class="objective">
-                    <span>02</span>
-                    <div>
-                        <h3>À moyen terme</h3>
-                        <p>
-                            Participer à des projets techniques,
-                            découvrir différents domaines du numérique
-                            et développer mon expérience professionnelle.
-                        </p>
-                    </div>
+                <div class="browser-content">
+                  <div class="browser-sidebar"></div>
+                  <div class="browser-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div></div>
+                  </div>
                 </div>
+              </div>
 
-                <div class="objective">
-                    <span>03</span>
-                    <div>
-                        <h3>À long terme</h3>
-                        <p>
-                            Devenir un ingénieur capable de concevoir
-                            des solutions innovantes et de répondre
-                            à des problématiques techniques complexes.
-                        </p>
-                    </div>
-                </div>
+              <div class="code-symbol">&lt;/&gt;</div>
             </div>
+
+            <div class="card-content">
+
+              <span class="project-category">
+                DÉVELOPPEMENT WEB
+              </span>
+
+              <h3>Mon ePortfolio</h3>
+
+              <p>
+                Conception et développement d'un site web
+                personnel pour présenter mon parcours,
+                mes compétences et mes réalisations.
+              </p>
+
+              <div class="technology-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+            </div>
+
+          </article>
+
         </div>
+
+      </div>
     </section>
 
-    <!-- BILAN -->
-    <section id="bilan" class="section section-soft">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">RÉFLEXION PERSONNELLE</p>
-                <h2>Mon évolution</h2>
-                <p>
-                    Un espace pour analyser mes apprentissages
-                    et suivre ma progression.
-                </p>
-            </div>
 
-            <div class="reflection-card">
-                <h3>Apprendre, expérimenter, progresser.</h3>
-                <p>
-                    Mon passage de la classe préparatoire à l'école
-                    d'ingénieur représente une nouvelle étape de mon
-                    parcours. Je souhaite profiter de cette formation
-                    pour développer mon autonomie, mettre en pratique
-                    mes connaissances et mieux définir mon projet
-                    professionnel.
-                </p>
-                <p>
-                    Cet espace sera enrichi régulièrement avec des
-                    bilans personnels, les compétences acquises et
-                    les difficultés rencontrées.
-                </p>
-            </div>
-        </div>
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-content reveal">
+
+        <span class="section-label">ET MAINTENANT ?</span>
+
+        <h2>Construisons la suite<span>.</span></h2>
+
+        <p>
+          Découvrez mon parcours et n'hésitez pas à me contacter
+          pour échanger autour de projets et d'opportunités.
+        </p>
+
+        <a href="mailto:VOTRE_EMAIL@example.com"
+           class="contact-button">
+          Me contacter <span>↗</span>
+        </a>
+
+      </div>
     </section>
 
-</main>
+  </main>
 
-<footer class="footer">
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container footer-content">
-        <div>
-            <a href="#accueil" class="logo">Mon<span>Portfolio.</span></a>
-            <p>Étudiant ingénieur · ENSEEIHT · Sciences du Numérique</p>
-        </div>
+      <a href="#accueil" class="logo">Portfolio<span>.</span></a>
 
-        <a href="#accueil" class="back-top">Retour en haut ↑</a>
-    </div>
+      <p>
+        © <span id="current-year"></span> · Mon portfolio personnel
+      </p>
 
-    <div class="copyright">
-        © 2026-2027 · Portfolio académique personnel
+      <a href="#accueil" class="back-to-top">
+        Retour en haut ↑
+      </a>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
