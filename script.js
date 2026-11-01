@@ -1,25 +1,31 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const navItems = document.querySelectorAll('.nav-links a');
 
-  // Mobile navigation menu
+  // Mobile navigation toggle
   if (menuToggle && navLinks) {
     const closeMenu = () => {
       navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.setAttribute('aria-label', 'Open navigation menu');
     };
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
+    const openMenu = () => {
+      navLinks.classList.add('open');
+      document.body.classList.add('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Close navigation menu');
+    };
 
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-      menuToggle.setAttribute(
-        'aria-label',
-        isOpen ? 'Close navigation menu' : 'Open navigation menu'
-      );
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.contains('open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     navItems.forEach((link) => {
@@ -40,18 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Automatic footer year
-  const year = document.getElementById('current-year');
-
-  if (year) {
-    year.textContent = new Date().getFullYear();
+  // Dynamic footer year
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 
-  // Reveal animations
+  // Reveal animations on scroll
   const revealElements = document.querySelectorAll('.reveal');
-  const reduceMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealElements.forEach((element) => {
@@ -78,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active navigation link while scrolling
+  // Active link highlight on scroll
   const sections = document.querySelectorAll('main section[id]');
 
   if ('IntersectionObserver' in window) {
@@ -90,9 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const activeId = entry.target.id;
 
           navItems.forEach((link) => {
-            const isActive =
-              link.getAttribute('href') === `#${activeId}`;
-
+            const isActive = link.getAttribute('href') === `#${activeId}`;
             link.classList.toggle('active', isActive);
           });
         });
